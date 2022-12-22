@@ -1,0 +1,122 @@
+<svg id="edcgB6QnoNY1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 800 400" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <defs>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Passions+Conflict&family=Secular+One&family=Sevillana&family=Signika+Negative&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+</style>
+
+</defs>
+    <defs>
+        <pattern id="attachedImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+            <image xlink:href="https://avatars.githubusercontent.com/u/68517592?s=400&u=418a39bced9cc4f2979ea90632ce094065c7747d&v=4" preserveAspectRatio="xMidYMid meet" width="1" height="1" />
+        </pattern>
+    </defs>
+    
+    <rect x="0" y="0" width="800" height="400" rx="12" ry="12" stroke="#ffffff" stroke-width="1%" fill="rgba(19,33,53,0.808)" />
+    <ellipse id="edcgB6QnoNY2" rx="56.035688" ry="56.035688" transform="matrix(1.35 0 0 1.35 91.996478 101.601986)"
+        fill="url(#attachedImage)" stroke-width="0" />
+
+    <text dx="0" dy="0"  font-size="30" font-weight="400"
+        transform="translate(194.19878 60.516845)" stroke-width="0">
+
+        <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
+            <![CDATA[
+Arian Shaikh, 
+]]>
+        </tspan>
+        <tspan id="smallText" y="0" font-size="15" font-weight="400" stroke-width="0">
+            <![CDATA[
+[about me a text]
+]]>
+        </tspan>
+    </text><text dx="0" dy="0"  font-size="30" font-weight="400"
+        transform="translate(193.286741 93.73453)" stroke-width="0">
+        <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
+            <![CDATA[
+Total PR merged 18, 
+]]>
+        </tspan>
+        <tspan y="0" id="smallText" font-size="15" font-weight="400" stroke-width="0">
+            <![CDATA[
+[Total pr 23]
+]]>
+        </tspan>
+    </text><text dx="0" dy="0" font-size="30" font-weight="400"
+        transform="translate(193.286741 129.567941)" stroke-width="0">
+        <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
+            <![CDATA[
+Total Issue created 17, 
+]]>
+        </tspan>
+        <tspan y="0" id="smallText" font-size="15" font-weight="400" stroke-width="0">
+            <![CDATA[
+[Total issue closed 43]
+]]>
+        </tspan>
+    </text><text dx="0" dy="0"  font-size="30" font-weight="400"
+        transform="translate(192.374702 162.929117)" stroke-width="0">
+        <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
+            <![CDATA[
+Most Popular project: we make devs
+]]>
+        </tspan></text>
+    <text dx="0" dy="-8" font-size="25" font-weight="400"
+        transform="translate(18.119689 259.683899)" stroke-width="0">
+        <tspan y="0" font-weight="400" stroke-width="0">
+            <![CDATA[
+Projects where I have contribution :
+]]>
+    </tspan></text>
+   
+    <ellipse rx="31" ry="31" transform="translate(48.676443 307.337946)" fill="url(#attachedImage)"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(118.676443 307.337946)" fill="#55b19d"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(188.676443 307.337946)" fill="#000000"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(258.676443 307.337946)" fill="#af0a8e"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(328.676443 307.337946)" fill="#5772a8"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(398.676443 307.337946)" fill="#ff1c1c"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(468.676443 307.337946)" fill="#fff129"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(538.676443 307.337946)" fill="#3c975f"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(608.676443 307.337946)" fill="#c5d8ff"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(678.676443 307.337946)" fill="#5880cf"
+         stroke="#eeeeee" stroke-width="0.3%" />
+    <ellipse rx="31" ry="31" transform="translate(748.676443 307.337946)" fill="#2a2b2e"
+        stroke="#eeeeee" stroke-width="0.3%" />
+    <text id="edcgB6QnoNY37" dx="0" dy="0" font-family="&quot;edcgB6QnoNY1:::Concert One&quot;"
+        font-size="18" font-weight="400" transform="translate(702.274394 362.566093)" opacity="0.63" stroke-width="0">
+        <tspan y="0" font-weight="400" stroke-width="0">
+            <![CDATA[
++ 12 more
+]]>
+        </tspan>
+    </text>
+    <script>
+        <![CDATA[
+        (function(s,i,u,o,c,w,d,t,n,x,e,p,a,b){w[o]=w[o]||{};w[o][s]=w[o][s]||[];w[o][s].push(i);e=d.createElementNS(n,t);e.async=true;e.setAttributeNS(x,'href',[u,s,'.','j','s','?','v','=',c].join(''));e.setAttributeNS(null,'src',[u,s,'.','j','s','?','v','=',c].join(''));p=d.getElementsByTagName(t)[0];p.parentNode.insertBefore(e,p);})('5c7f360c',{"root":"edcgB6QnoNY1","version":"2022-05-04","animations":[{"elements":{"edcgB6QnoNY2":{"transform":{"data":{"o":{"x":91.996478,"y":101.601986,"type":"corner"}},"keys":{"s":[{"t":0,"v":{"x":1.35,"y":1.35}},{"t":1000,"v":{"x":1.38,"y":1.38}},{"t":2000,"v":{"x":1.35,"y":1.35}}]}}},"edcgB6QnoNY37":{"opacity":[{"t":0,"v":0.63,"e":[0.37111,0,0.699031,0.381098]},{"t":1000,"v":0.92,"e":[0.369989,0.2339,0.684994,0.61695]},{"t":1880,"v":0.63}]}},"s":"MYDA1ZGRlRDg1YzdkOGXQ1YzRkN2NjZDJkMTgN1OWQ5NTkzOTM5MzhmSSzg1YzdjY2Q1YzhjNDmQ3Y2NkMmQxODU5ZDIk0OGY4NWNjTWQ3TmMC4ZDVLYzRkN2NjZDJkQMVRkNjg1OWQ5MzhmOPDVjOWNjY2ZjZjg1VjOlkOTQ4Zjg1YzRjZmQY3YzhkNWQxYzRQZDdjOODg1OWRIYzljNGNmZXDZMYzg4Zjg1ZDZkM2HM4YzhjN0E4NTlkOTQN4Zjg1YzlkM2Q2ODU5LZDk0OTM5M2Uw"}],"options":"MVDAxMDg4MmZMODA4MTFZlN2ZCODEyZjQ3MmYG3OTdjNmU3MTJmRDhhG"},'https://cdn.svgator.com/ply/','__SVGATOR_PLAYER__','2022-05-04',window,document,'script','http://www.w3.org/2000/svg','http://www.w3.org/1999/xlink')
+        ]]>
+    </script>
+
+    //change the font styles
+    <style>
+        #edcgB6QnoNY1 text {
+        font-family: 'Secular One', sans-serif;
+        fill: rgb(42, 73, 161);
+        }
+        #smallText{
+            font-family: 'Urbanist', sans-serif;
+            fill: rgba(237,237,238,0.651);
+        }
+    </style>
+</svg>
+
