@@ -54,4 +54,5 @@ return svgStats;
 
 }
 
+
 module.exports = statsText;

@@ -24,14 +24,22 @@ app.get("/:username", async (req, res)=>{
     name: userDetails.name,
     username: userDetails.login,
     totalPRMerged: allPRs.merged_PRs.length,
-    totalPRCreated: allPRs.totalPRs,
+    totalPRcreated: allPRs.totalPRs,
     totalIssueCreated: allIssues.totalIssues,
-    totalIssueClosed: allIssues.closedIssues.length,
+    totalIssueClosed: allIssues.closed_issues.length,
     mostPopularProject: allPRs.mostPopularRepo.full_name,
+    mostPopularProjectStart: allPRs.mostPopularRepoStars
   }
-  let getStats_svg = await svgTemplate.getStats(statsObject);
-  
-  // res.send(getDP_svg);
+  let getStats_svg = await svgTemplate.svgStats(statsObject);
+  let howManyMoretext = allPRs.merged_PRs.length - 11;
+  if(howManyMoretext < 0){
+    howManyMoretext = 0;
+  }
+  let getHowManyMorePRs_svg = await svgTemplate.howManyMoreText(howManyMoretext);
+
+
+
+  // res.send(statsObject);
 
 });
   
