@@ -1,7 +1,9 @@
-const style_mainSVG = require('./utils/scripts/getStyle');
-const style_contributionCircle = require('./utils/scripts/getContributionCircle');
-const howManyMoreText = require('./utils/scripts/getMoreText');
-const getAnimation = require('./utils/scripts/getAnimation');
-const svgStats = require('./utils/scripts/getAllStats');
-const getDP = require('./utils/scripts/getDP');
-const svgBoilerPlate = require('./utils/scripts/basicSVGdeclaration');
+const style_mainSVG = require('../scripts/getStyle');
+const style_contributionCircle = require('../scripts/getContributionCircle');
+const howManyMoreText = require('../scripts/getMoreText');
+const getAnimation = require('../scripts/getAnimation');
+const svgStats = require('../scripts/getAllStats');
+const getDP = require('../scripts/getDP');
+const svgBoilerPlate = require('../scripts/basicSVGdeclaration');
+
+module.exports = {style_mainSVG, style_contributionCircle, howManyMoreText, getAnimation, svgStats, getDP, svgBoilerPlate};

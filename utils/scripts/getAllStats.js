@@ -16,12 +16,12 @@ ${statsObject.username}
     transform="translate(193.286741 93.73453)" stroke-width="0">
     <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
         <![CDATA[
-Total PR merged ${statsObject.totalPRMerged}, 
+Total Pull Request merged ${statsObject.totalPRMerged}, 
 ]]>
     </tspan>
     <tspan y="0" id="smallText" font-size="15" font-weight="400" stroke-width="0">
         <![CDATA[
-Total pr ${statsObject.totalPRcreated}
+Total PR created ${statsObject.totalPRcreated}
 ]]>
     </tspan>
 </text><text dx="0" dy="0" font-size="30" font-weight="400"
@@ -53,3 +53,5 @@ My Recent Contributions :
 return svgStats;
 
 }
+
+module.exports = statsText;
