@@ -7,7 +7,8 @@ fill: rgb(42, 73, 161);
     font-family: 'Urbanist', sans-serif;
     fill: rgba(237,237,238,0.651);
 }
-</style>`;
+</style>
+</svg>`;
 
 function style_mainSVG() {
 	return styleoftheSVG;

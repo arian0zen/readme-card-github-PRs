@@ -3,10 +3,10 @@ function svgBoilerPlate(){
     viewBox="0 0 800 400" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
     <defs>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Passions+Conflict&family=Secular+One&family=Sevillana&family=Signika+Negative&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Secular+One');
     </style>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300');
     </style>`
     return startSVG;
 }

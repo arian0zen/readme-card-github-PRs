@@ -30,16 +30,27 @@ app.get("/:username", async (req, res)=>{
     mostPopularProject: allPRs.mostPopularRepo.full_name,
     mostPopularProjectStart: allPRs.mostPopularRepoStars
   }
+
   let getStats_svg = await svgTemplate.svgStats(statsObject);
+  let getAnimation_svg = await svgTemplate.getAnimation();
   let howManyMoretext = allPRs.merged_PRs.length - 11;
   if(howManyMoretext < 0){
     howManyMoretext = 0;
   }
   let getHowManyMorePRs_svg = await svgTemplate.howManyMoreText(howManyMoretext);
+  let getContributedCircle_svg = '';
+  let iteration_no = 0;
+  let array_mergedRepoDetails = allPRs.allRepo_array;
+  Array.from(array_mergedRepoDetails).forEach((repo)=>{
+    let oneRepo_style = svgTemplate.style_contributionCircle(repo.owner.avatar_url, iteration_no, iteration_no);
+    getContributedCircle_svg += oneRepo_style;
+    iteration_no++;
+  })
+  let getStyle_svg = await svgTemplate.style_mainSVG();
 
-
-
-  // res.send(statsObject);
+  let completeCard_svg = basicSVGboilerPlate + getDP_svg + getStats_svg + getContributedCircle_svg + getHowManyMorePRs_svg + getAnimation_svg + getStyle_svg; 
+  res.set('Content-Type', 'image/svg+xml');
+  res.send(completeCard_svg);
 
 });
   

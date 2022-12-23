@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 require('dotenv').config()
 
 async function getPullRequests(username) {
+ 
     var totalPRs = await axios
     .get(`https://api.github.com/search/issues?q=is:pr+author:${username}`)
       .catch(error => {
@@ -30,8 +31,9 @@ async function getPullRequests(username) {
           PRs_array: totalPRs.data.items,
           merged_PRs: merged_PRs,
           nonMerged_PRs: nonMerged_PRs,
-          mostPopularRepo: repo,
-          mostPopularRepoStars: repo.stargazers_count
+          mostPopularRepo: repo.repoWithMostStars,
+          mostPopularRepoStars: repo.repoWithMostStars.stargazers_count,
+          allRepo_array: repo.allRepo_array,
          }
          return PR_obejct;
       }));
@@ -42,17 +44,25 @@ async function getPullRequests(username) {
 async function getRepoWithMostStars(repoUrls) {
   let mostStars = 0;
   let repoWithMostStars;
+  let allRepo_array = [];
   for (const repoUrl of repoUrls) {
     const response = await fetch((repoUrl),  {
       headers: { 'Content-Type': 'application/json',
                   'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}});
     const repo = await response.json();
-    if (repo.stargazers_count > mostStars) {
+    allRepo_array.push(repo);
+    if (repo.stargazers_count >= mostStars) {
       mostStars = repo.stargazers_count;
       repoWithMostStars = repo;
     }
   }
-  return repoWithMostStars;
+
+  let repos_object = {
+    allRepo_array: allRepo_array,
+    repoWithMostStars: repoWithMostStars
+  };
+
+  return repos_object;
 }
 
 module.exports = getPullRequests;

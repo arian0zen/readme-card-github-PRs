@@ -4,7 +4,7 @@ function getHowManyMoreText(howMany) {
   <tspan y="0" font-weight="400" stroke-width="0">
       <![CDATA[
 + ${howMany} more
-]]>`;
+]]> </tspan> </text>`;
   return howManyMoreText;
 }
 
