@@ -1,4 +1,7 @@
 const axios = require('axios');
+require('dotenv').config()
+
+axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
 
 async function getRepoDetails(repoLink) {
     var repository = await axios
