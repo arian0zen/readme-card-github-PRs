@@ -1,8 +1,4 @@
 let styleoftheSVG = `    <style>
-#edcgB6QnoNY1 {
-    fill: url(#attachedImage);
-    background-image: url("https://avatars.githubusercontent.com/u/68517592?v=4")
-}
 #edcgB6QnoNY1 text {
 font-family: 'Secular One', sans-serif;
 fill: rgb(42, 73, 161);
