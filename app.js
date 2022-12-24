@@ -1,3 +1,4 @@
+var convertapi = require('convertapi')('Gwsn7Uc9PO0srvNd');
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -16,6 +17,17 @@ const basicSVGboilerPlate = svgTemplate.svgBoilerPlate();
 app.get("/", (req, res)=>{
   res.send("Hello World")
 })
+
+app.get("/convert", (req, res)=>{
+  convertapi.convert('svg', {
+      File: 'https://avatars.githubusercontent.com/u/68517592?v=4'
+  }, 'jpg').then(function(result) {
+      console.log(result.data);
+  });
+});
+
+
+
 
 app.get("/getstats/:username", async (req, res)=>{
   const userName = req.params.username;

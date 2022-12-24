@@ -17,7 +17,7 @@
 
     <rect x="0" y="0" width="800" height="400" rx="12" ry="12" stroke="#ffffff" stroke-width="1%"
         fill="rgba(19,33,53,0.808)" />
-    <ellipse id="edcgB6QnoNY2" rx="56.035688" ry="56.035688" transform="matrix(1.35 0 0 1.35 91.996478 101.601986)"
+    <ellipse id="edcgB6QnoNY2" rx="56.035688" ry="56.035688" fill="url(#attachedImage)" transform="matrix(1.35 0 0 1.35 91.996478 101.601986)"
          stroke-width="0" /><text dx="0" dy="0" font-size="30" font-weight="400"
         transform="translate(194.19878 60.516845)" stroke-width="0">
 
@@ -115,10 +115,6 @@ My Recent Contributions :
             ]]>
         </script>
         <style>
-            #edcgB6QnoNY1 {
-                fill: url(#attachedImage);
-                background-image: url("https://avatars.githubusercontent.com/u/68517592?v=4")
-            }
             #edcgB6QnoNY1 text {
                 font-family: 'Secular One', sans-serif;
                 fill: #8391b8;
