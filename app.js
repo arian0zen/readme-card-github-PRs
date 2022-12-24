@@ -13,8 +13,11 @@ app.use(express.static("public"));
 
 const basicSVGboilerPlate = svgTemplate.svgBoilerPlate();
 
+app.get("/", (req, res)=>{
+  res.send("Hello World")
+})
 
-app.get("/getStats/:username", async (req, res)=>{
+app.get("/getstats/:username", async (req, res)=>{
   const userName = req.params.username;
   let userDetails = await allStats.getUserDetails(userName);
   let allPRs = await allStats.getPRs(userName);
