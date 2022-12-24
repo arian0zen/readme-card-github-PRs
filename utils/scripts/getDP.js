@@ -1,4 +1,6 @@
 function getDP(dpLink){
+    //convert dp link to string
+    dpLink = dpLink.toString();
     let dpSvg = `</defs>
     <defs>
         <pattern id="attachedImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">

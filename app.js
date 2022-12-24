@@ -49,7 +49,7 @@ app.get("/getStats/:username", async (req, res)=>{
   let getStyle_svg = await svgTemplate.style_mainSVG();
 
   let completeCard_svg = basicSVGboilerPlate + getDP_svg + getStats_svg + getContributedCircle_svg + getHowManyMorePRs_svg + getAnimation_svg + getStyle_svg; 
-  res.set('Content-Type', 'image/svg+xml');
+  res.setHeader('Content-Type', 'image/svg+xml');
   res.send(completeCard_svg);
 
 });
