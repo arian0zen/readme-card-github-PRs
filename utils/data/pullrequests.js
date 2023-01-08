@@ -1,42 +1,48 @@
-const axios = require('axios');
-const fetch = require('node-fetch');
-require('dotenv').config()
+const axios = require("axios");
+const fetch = require("node-fetch");
+require("dotenv").config();
 
 async function getPullRequests(username) {
- 
-    var totalPRs = await axios
+  var totalPRs = await axios
     .get(`https://api.github.com/search/issues?q=is:pr+author:${username}`)
-      .catch(error => {
-        return ('There was an error!', error);
-      });
-      if(totalPRs.data == undefined){
-        return totalPRs.errors;
-      };
-      let merged_PRs = [];
-      let nonMerged_PRs = [];
-      let repoUrls = [];
-      Array.from(totalPRs.data.items).forEach((PR) => {
-        if(PR.pull_request.merged_at != null){
-          merged_PRs.push(PR);
-          repoUrls.push(PR.repository_url);
-        }else{
-          nonMerged_PRs.push(PR);
-        };
-      });
-      
+    .catch((error) => {
+      return "There was an error!", error;
+    });
+  if (totalPRs.data == undefined) {
+    return totalPRs.errors;
+  }
+  let merged_PRs = [];
+  let nonMerged_PRs = [];
+  let repoUrls = [];
+  Array.from(totalPRs.data.items).forEach((PR) => {
+    if (PR.pull_request.merged_at != null) {
+      merged_PRs.push(PR);
+      repoUrls.push(PR.repository_url);
+    } else {
+      nonMerged_PRs.push(PR);
+    }
+  });
 
-  return (getRepoWithMostStars(repoUrls).then((repo) => {
-          let PR_obejct = {
-          totalPRs: totalPRs.data.total_count,
-          PRs_array: totalPRs.data.items,
-          merged_PRs: merged_PRs,
-          nonMerged_PRs: nonMerged_PRs,
-          mostPopularRepo: repo.repoWithMostStars,
-          mostPopularRepoStars: repo.repoWithMostStars.stargazers_count,
-          allRepo_array: repo.allRepo_array,
-         }
-         return PR_obejct;
-      }));
+  return getRepoWithMostStars(repoUrls).then((repo) => {
+    if (repo == undefined) {
+      return;
+    }
+    let popular_repo_name = repo.repoWithMostStars.full_name;
+    if (popular_repo_name.length > 22) {
+      popular_repo_name = popular_repo_name.substring(0, 20) + "...";
+    }
+    let PR_obejct = {
+      totalPRs: totalPRs.data.total_count,
+      PRs_array: totalPRs.data.items,
+      merged_PRs: merged_PRs,
+      nonMerged_PRs: nonMerged_PRs,
+      mostPopularRepo: repo.repoWithMostStars,
+      mostPopular_repoName: popular_repo_name,
+      mostPopularRepoStars: repo.repoWithMostStars.stargazers_count,
+      allRepo_array: repo.allRepo_array,
+    };
+    return PR_obejct;
+  });
 }
 
 //define a function to get the most popular repo
@@ -46,9 +52,12 @@ async function getRepoWithMostStars(repoUrls) {
   let repoWithMostStars;
   let allRepo_array = [];
   for (const repoUrl of repoUrls) {
-    const response = await fetch((repoUrl),  {
-      headers: { 'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}});
+    const response = await fetch(repoUrl, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      },
+    });
     const repo = await response.json();
     allRepo_array.push(repo);
     if (repo.stargazers_count >= mostStars) {
@@ -56,10 +65,13 @@ async function getRepoWithMostStars(repoUrls) {
       repoWithMostStars = repo;
     }
   }
-
+  if (repoWithMostStars == undefined) {
+    console.log("undefined");
+    return;
+  }
   let repos_object = {
     allRepo_array: allRepo_array,
-    repoWithMostStars: repoWithMostStars
+    repoWithMostStars: repoWithMostStars,
   };
 
   return repos_object;

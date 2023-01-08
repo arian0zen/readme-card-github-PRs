@@ -10,9 +10,10 @@ async function getUser(username) {
         return('There was an error!', error);
       });
       if(userDetails.data == undefined){
-        return userDetails.message;
+        return userDetails;
       };
       return userDetails.data;
 }
+
 
 module.exports = getUser;

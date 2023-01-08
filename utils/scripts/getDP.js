@@ -1,10 +1,12 @@
-function getDP(dpLink){
-    //convert dp link to string
-    dpLink = dpLink.toString();
+const img_toData = require('../helpers/img_toData');
+
+async function getDP(dpLink){
+    //convert dp link to string(64 bit encoded data)
+    const imgData = await img_toData(dpLink);
     let dpSvg = `</defs>
     <defs>
         <pattern id="attachedImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-            <image xlink:href="${dpLink}" preserveAspectRatio="xMidYMid meet" width="1" height="1" />
+            <image xlink:href="${imgData}" preserveAspectRatio="xMidYMid meet" width="1" height="1" />
         </pattern>
     </defs>
     

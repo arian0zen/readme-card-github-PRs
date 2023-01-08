@@ -1,7 +1,7 @@
 let styleoftheSVG = `    <style>
 #edcgB6QnoNY1 text {
 font-family: 'Secular One', sans-serif;
-fill: rgb(42, 73, 161);
+fill: rgb(0, 0, 0);
 }
 #smallText{
     font-family: 'Urbanist', sans-serif;

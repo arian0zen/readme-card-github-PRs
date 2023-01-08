@@ -40,7 +40,7 @@ Total issue closed ${statsObject.totalIssueClosed}
     transform="translate(192.374702 162.929117)" stroke-width="0">
     <tspan y="0" font-size="25" font-weight="400" stroke-width="0">
         <![CDATA[
-Most Popular project: ${statsObject.mostPopularProject},
+Most Popular project: ${statsObject.mostPopularProject}
 ]]>
     </tspan></text>
 <text dx="0" dy="-8" font-size="25" font-weight="400"
