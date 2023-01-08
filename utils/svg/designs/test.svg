@@ -2,10 +2,24 @@
     viewBox="0 0 800 400" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
     <defs>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Secular+One');
-        </style>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300');
+            /* secular-one-regular - latin */
+            @font-face {
+            font-family: 'Secular One';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('../../../public/fonts/secular-one-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('../../../public/fonts/secular-one-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+            /* urbanist-regular - latin */
+            @font-face {
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('../../../public/fonts/urbanist-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('../../../public/fonts/urbanist-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
         </style>
     </defs>
     <defs>
@@ -28,7 +42,7 @@ Arian Shaikh,
         </tspan>
         <tspan id="smallText" y="0" font-size="15" font-weight="400" stroke-width="0">
             <![CDATA[
-arian0zen
+arian0ze
 ]]>
         </tspan>
     </text><text dx="0" dy="0" font-size="30" font-weight="400" transform="translate(193.286741 93.73453)"
