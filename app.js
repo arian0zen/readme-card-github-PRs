@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/getstats/:username", async (req, res) => {
-  const req_time = Date.now();
+  // const req_time = Date.now();
   const userName = req.params.username;
   let userDetails = await allStats.getUserDetails(userName);
   if(userDetails.code){
@@ -33,10 +33,8 @@ app.get("/getstats/:username", async (req, res) => {
     return;
   }
 
-  let Prtime = Date.now();
 
   let allPRs = await allStats.getPRs(userName);
-  console.log('time taken to allPRs ', Date.now() - Prtime);
   let allIssues = await allStats.getIssues(userName);
   let getDP_svg = await svgTemplate.getDP(userDetails.avatar_url);
   if(allPRs == null || allIssues == null){
@@ -77,8 +75,8 @@ app.get("/getstats/:username", async (req, res) => {
     getHowManyMorePRs_svg +
     getAnimation_svg +
     getStyle_svg;
-  const end_time = Date.now();
-  console.log('time taken to load ' + Math.floor(end_time - req_time) + ' mili-seconds');
+  // const end_time = Date.now();
+  // console.log('time taken to load ' + Math.floor(end_time - req_time) + ' mili-seconds');
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(completeCard_svg);
 });
