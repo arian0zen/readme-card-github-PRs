@@ -90,3 +90,52 @@ async function getRepoWithMostStars(repoUrls) {
 module.exports = getPullRequests;
 
 
+
+// Array.from(totalPRs.data.items).forEach(async (PR) => {
+//   if (PR.pull_request.merged_at != null) {
+//     merged_PRs.push(PR);
+//     repoUrls.push(PR.repository_url);
+//   } else {
+//     nonMerged_PRs.push(PR);
+//   }
+// });
+
+
+
+// ------------------
+
+
+
+
+// async function getRepoWithMostStars(repoUrls) {
+//   let repoDetails = Date.now();
+//   let mostStars = 0;
+//   let repoWithMostStars;
+//   let allRepo_array = [];
+//   for (const repoUrl of repoUrls) {
+//     const response = await fetch(repoUrl, {
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+//       },
+//     });
+//     const repo = await response.json();
+//     allRepo_array.push(repo);
+//     if (repo.stargazers_count >= mostStars) {
+//       mostStars = repo.stargazers_count;
+//       repoWithMostStars = repo;
+//     }
+//   }
+//   if (repoWithMostStars == undefined) {
+//     console.log("undefined");
+//     return;
+//   }
+//   let repos_object = {
+//     allRepo_array: allRepo_array,
+//     repoWithMostStars: repoWithMostStars,
+//   };
+//   console.log("time taken to repoDetails ", Date.now() - repoDetails);
+//   return repos_object;
+// }
+
+// module.exports = getPullRequests;
