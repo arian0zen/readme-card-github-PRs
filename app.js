@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/getstats/:username", async (req, res) => {
+  const req_time = Date.now();
   const userName = req.params.username;
   let userDetails = await allStats.getUserDetails(userName);
   if(userDetails.code){
@@ -32,7 +33,10 @@ app.get("/getstats/:username", async (req, res) => {
     return;
   }
 
+  let Prtime = Date.now();
+
   let allPRs = await allStats.getPRs(userName);
+  console.log('time taken to allPRs ', Date.now() - Prtime);
   let allIssues = await allStats.getIssues(userName);
   let getDP_svg = await svgTemplate.getDP(userDetails.avatar_url);
   if(allPRs == null || allIssues == null){
@@ -51,24 +55,21 @@ app.get("/getstats/:username", async (req, res) => {
     mostPopularProjectStart: allPRs.mostPopularRepoStars,
   };
 
-  let getStats_svg = await svgTemplate.svgStats(statsObject);
-  let getAnimation_svg = await svgTemplate.getAnimation();
+  let getStats_svg = svgTemplate.svgStats(statsObject);
+  let getAnimation_svg = svgTemplate.getAnimation();
   let howManyMoretext = allPRs.merged_PRs.length - 11;
   if (howManyMoretext < 0) {
     howManyMoretext = 0;
   }
-  let getHowManyMorePRs_svg = await svgTemplate.howManyMoreText(
+  let getHowManyMorePRs_svg = svgTemplate.howManyMoreText(
     howManyMoretext
   );
-  let getContributedCircle_svg = "";
-  let array_mergedRepoDetails = allPRs.allRepo_array;
-  await Promise.all(array_mergedRepoDetails.map(async (repo, index) => {
-    let oneRepo_style = await svgTemplate.style_contributionCircle(repo.owner.avatar_url, index, index);
-    getContributedCircle_svg += oneRepo_style;
-  }));
-  let getStyle_svg = await svgTemplate.style_mainSVG();
+  let array_mergedRepoDetails = allPRs.allRepo_array.splice(0, 11);
+  let getContributedCircle_svg = await svgTemplate.style_contributionCircle(array_mergedRepoDetails);
+  
+  let getStyle_svg = svgTemplate.style_mainSVG();
 
-  let completeCard_svg =
+    let completeCard_svg =
     basicSVGboilerPlate +
     getDP_svg +
     getStats_svg +
@@ -76,6 +77,8 @@ app.get("/getstats/:username", async (req, res) => {
     getHowManyMorePRs_svg +
     getAnimation_svg +
     getStyle_svg;
+  const end_time = Date.now();
+  console.log('time taken to load ' + Math.floor(end_time - req_time) + ' mili-seconds');
   res.setHeader("Content-Type", "image/svg+xml");
   res.send(completeCard_svg);
 });
