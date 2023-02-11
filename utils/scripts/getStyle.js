@@ -1,11 +1,11 @@
 let styleoftheSVG = `    <style>
 #edcgB6QnoNY1 text {
 font-family: 'secular_oneregular', sans-serif;
-fill: rgb(241,239,240);
+fill: rgb(188,222,254);
 }
 #smallText{
     font-family: 'urbanistregular', sans-serif;
-    fill: #adbec2;
+    fill: rgb(50,138,220);
 }
 </style>
 </svg>`;
