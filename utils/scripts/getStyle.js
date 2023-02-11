@@ -1,10 +1,10 @@
 let styleoftheSVG = `    <style>
 #edcgB6QnoNY1 text {
-font-family: 'Secular One', sans-serif;
+font-family: 'secular_oneregular', sans-serif;
 fill: rgb(0, 0, 0);
 }
 #smallText{
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'urbanistregular', sans-serif;
     fill: rgba(237,237,238,0.651);
 }
 </style>
